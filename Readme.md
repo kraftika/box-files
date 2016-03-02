@@ -1,5 +1,12 @@
-###Upload files using box APIs
-1. The users logins
-2. Selects file from disk
-3. Upload the files
-4. The files are displayed as list
+# box-files
+
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.11.1.
+
+## Build & development
+
+Run `grunt` for building and `grunt serve` for preview.
+
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
