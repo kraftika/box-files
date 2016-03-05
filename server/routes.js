@@ -2,7 +2,7 @@ module.exports = function(app) {
 
   app.get('/', function (req, res) {
     var box = req.app.box;
-    var state = req.query.state || ''
+    var state = req.query.state || 'security_token3DKnhMJatFipTAnM0nHlZSS';
     box.authorize(state, function(err, response) {
       res.redirect(response.redirect);
     });
