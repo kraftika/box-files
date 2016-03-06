@@ -23,4 +23,19 @@ module.exports = function(app) {
     });
   });
 
+  app.get('/file/:id', function (req, res) {
+    var box = req.app.box;
+    var options = { tokens: req.cookies['x-boxtoken'] };
+    box.content.file.get(req.params.id, options, function(err, response, tokens) {
+      res.cookie('x-boxtoken', tokens).json(response.body);
+    });
+  });
+
+  app.get('/files/:id/content', function (req, res) {
+    var box = req.app.box;
+    var options = { tokens: req.cookies['x-boxtoken'] };
+    box.content.file.get(req.params.id, options, function(err, response, tokens) {
+      res.cookie('x-boxtoken', tokens).json(response.body);
+    });
+  });
 };
