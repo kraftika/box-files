@@ -13,9 +13,16 @@
         <a class="navbar-brand" ui-sref="#">Box Files Router</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><a <a ui-sref="home">Login</a></li>
+        <li><a <a ui-sref="home">Home</a></li>
+        <li><a <a ui-sref="login">Login</a></li>
+        <li><a <a ui-sref="download">Download</a></li>
+        <li><a <a ui-sref="upload">Upload</a></li>
       </ul>
     </nav>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
     the result is {{ 1 + 2 }}
 
     <p>Enter your Name: <input type = "text" ng-model = "name"></p>{{name}}
