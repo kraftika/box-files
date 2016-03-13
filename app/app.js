@@ -1,25 +1,39 @@
 'use strict'
 
-var routeApplication = angular.module('boxFilesConfig', ['ui.router']);
+var app = angular.module('boxiApp', ['ui.router']);
 
-routeApplication.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouteProvider.otherwise('/login');
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('login', {
-      url: '/login',
-      templateUrl: 'login.html'
-    })
-    .state('list', {
-      url: '/list',
-      templateUrl: 'files.html'
+        url:'/',
+        templateUrl: 'home.html'
     })
     .state('download', {
-      url: '/download',
-      templateUrl: 'download.html'
+        url:'/download',
+        templateUrl: 'download.html'
     })
-    .state('upload', {
-      url: '/upload',
-      templateUrl: 'upload.html'
-    });
-});
+}]);
+
+// boxi.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+//   $urlRouteProvider.otherwise('/');
+
+//   $stateProvider
+//     .state('login', {
+//       url: '/login',
+//       templateUrl: 'login.html'
+//     })
+//     .state('list', {
+//       url: '/list',
+//       templateUrl: 'files.html'
+//     })
+//     .state('download', {
+//       url: '/download',
+//       templateUrl: 'download.html'
+//     })
+//     .state('upload', {
+//       url: '/upload',
+//       templateUrl: 'upload.html'
+//     });
+// }]);
