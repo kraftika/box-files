@@ -426,5 +426,14 @@ module.exports = function (grunt) {
     'parallel:web',
   ]);
 
+  grunt.registerTask('test', [
+    'clean:server',
+    'wiredep',
+    'concurrent:test',
+    'postcss',
+    'connect:test',
+    'karma'
+  ]);
+
   grunt.registerTask('default', ['web']);
 }
