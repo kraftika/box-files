@@ -9,6 +9,7 @@ app.use(cookieParser())
 
 require('./routes')(app);
 
-app.listen(8088, function() {
-  console.log('server is listening');
+var port = 8088;
+app.listen(port, function() {
+  console.log('The web server is listening on ' + port);
 });

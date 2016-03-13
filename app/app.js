@@ -4,6 +4,7 @@ var app = angular.module('boxiApp', ['ui.router']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
+  console.log('Run ....');
 
   $stateProvider
     .state('login', {
