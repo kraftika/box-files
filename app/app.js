@@ -1,6 +1,9 @@
 'use strict'
 
-var app = angular.module('boxiApp', ['ui.router']);
+var app = angular.module('boxiApp', [
+    'ui.router',
+    'boxiApp.authentication'
+    ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home');
@@ -8,12 +11,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
   $stateProvider
     .state('home', {
-        url:'/home',
+        url:'/',
         templateUrl: 'home.html'
     })
     .state('login', {
         url:'/login',
-        templateUrl: 'login.html'
+        templateUrl: 'login.html',
+        controller: 'loginController'
     })
     .state('download', {
         url:'/download',
