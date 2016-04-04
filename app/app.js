@@ -5,7 +5,7 @@ var app = angular.module('boxiApp', [
     'boxiApp.authentication'
     ]);
 
-app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
   $urlRouterProvider.otherwise('/home');
   console.log('Run ....');
 
@@ -26,5 +26,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state('upload', {
         url:'/upload',
         templateUrl: 'upload.html'
-    })
+    });
+
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
