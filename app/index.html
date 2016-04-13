@@ -9,15 +9,12 @@
 <body ng-app="boxiApp">
   <h3>Easy and fast, manage your files</h3>
     <nav class="navbar nabbar-inverse" role="navigation">
-      <div class="navbar-header">
-        <a class="navbar-brand" ui-sref="#">Box Files Router</a>
-      </div>
       <ul class="nav navbar-nav">
-        <li><a <a ui-sref="login">Login</a></li>
+        <li><a ui-sref="login">Login</a></li>
       </ul>
     </nav>
     <div class="container">
-        <div ui-view></div>
+      <div ui-view></div>
     </div>
 
   <script src="../bower_components/angular/angular.min.js"></script>
@@ -27,6 +24,7 @@
   <script src="autheticationModule.js"></script>
   <script src="loginController.js"></script>
   <script src="authorizeService.js"></script>
+  <script src="authorizeController.js"></script>
 
   <script src="app.js"></script>
 </body>
