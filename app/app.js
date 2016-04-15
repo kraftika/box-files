@@ -24,16 +24,15 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
         templateUrl: 'login.html',
         controller: 'loginController'
     })
-    .state('download', {
-        url:'/download',
-        templateUrl: 'download.html'
+    .state('files', {
+        url:'/files',
+        templateUrl: 'files.html',
+        controller: 'filesController'
     })
     .state('upload', {
         url:'/upload',
         templateUrl: 'upload.html'
     });
-
-    // $locationProvider.html5Mode(true);
 
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];

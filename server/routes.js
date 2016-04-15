@@ -1,8 +1,6 @@
 module.exports = function(app) {
 
   app.get('/', function (req, res) {
-
-    console.log('I am called');
     var box = req.app.box;
     var state = req.query.state || 'security_token3DKnhMJatFipTAnM0nHlZSS';
 
@@ -15,8 +13,7 @@ module.exports = function(app) {
     var box = req.app.box;
     console.log('I received callback ');
     box.generateToken({authorization_code: req.query.code}, function(err, tokens) {
-      // res.cookie('x-boxtoken', tokens).redirect('/folder/0');
-      res.cookie('x-boxtoken', tokens).redirect('http://localhost:9000/#/authorize');
+      res.cookie('x-boxtoken', tokens).redirect('http://localhost:9000/#/files');
     });
   });
 
