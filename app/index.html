@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-9">
-  <title>Manage your files using Box applications</title>
+  <title>Manage your files using Boxi application</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
-<body ng-app="boxiApp">
-  <h3>Easy and fast, manage your files</h3>
-    <nav class="navbar nabbar-inverse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li><a ui-sref="login">Login</a></li>
-      </ul>
-    </nav>
-    <div class="container">
-      <div ui-view></div>
-    </div>
+<body ng-app="boxi">
+<!--   <nav class="navbar nabbar-inverse" role="navigation">
+    <ul class="nav navbar-nav">
+      <li><a ui-sref="login">Login</a></li>
+    </ul>
+  </nav> -->
+  <div class="container">
+    <div ui-view></div>
+  </div>
 
   <script src="../bower_components/angular/angular.min.js"></script>
   <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
-  <script src="autheticationModule.js"></script>
-  <script src="loginController.js"></script>
-  <script src="authorizeService.js"></script>
-  <script src="authorizeController.js"></script>
+  <script src="../auth/authModule.js"></script>
+  <script src="../auth/authController.js"></script>
   <script src="filesController.js"></script>
   <script src="filesService.js"></script>
 

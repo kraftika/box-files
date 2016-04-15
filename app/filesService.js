@@ -1,23 +1,24 @@
 'use strict';
 
-angular.module('boxiApp.authentication')
+angular.module('boxi.auth')
   .factory('filesService', ['$http', function($http) {
     return {
       getFiles: getFiles,
       getFile: getFile
     }
 
-    function getFiles() {
-      $http.defaults.useXDomain = true;
+    function getFiles(baseUrl) {
+      var url = 'http://localhost:8088/folder/0';
 
       var request = $http({
           method: 'GET',
-          url: 'http://localhost:8088/folder/0',
+          url: url,
           withCredentials: true,
           headers: {
             'Content-Type': 'application/json; application/x-www-form-urlencoded; charset=utf-8',
             'X-Custom-Header': 'Angular.js',
-          }
+          },
+          cache: true
         });
 
       return(request.then(getEntries, handleError));
@@ -31,6 +32,6 @@ angular.module('boxiApp.authentication')
     }
 
     function handleError(response) {
-      return('An error has occurred...');
+      return( $q.reject({ message: 'Unable to retrive files list' }));
     }
   }]);
