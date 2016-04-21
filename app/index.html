@@ -7,11 +7,6 @@
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
 <body ng-app="boxi">
-<!--   <nav class="navbar nabbar-inverse" role="navigation">
-    <ul class="nav navbar-nav">
-      <li><a ui-sref="login">Login</a></li>
-    </ul>
-  </nav> -->
   <div class="container">
     <div ui-view></div>
   </div>
@@ -22,8 +17,9 @@
 
   <script src="../auth/authModule.js"></script>
   <script src="../auth/authController.js"></script>
-  <script src="filesController.js"></script>
-  <script src="filesService.js"></script>
+  <script src="../file/filesModule.js"></script>
+  <script src="../file/filesService.js"></script>
+  <script src="../file/filesController.js"></script>
 
   <script src="app.js"></script>
 </body>

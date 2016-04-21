@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('boxi.auth')
+angular.module('boxi.files')
   .factory('filesService', ['$http', function($http) {
     return {
       getFiles: getFiles,
