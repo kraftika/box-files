@@ -17,13 +17,15 @@
   * CORS setup
 
 ## Run application
+  * ./setup.sh
+  * grunt
 
 ## Next steps
   * Deploy server on heroku
   * Setup deployment
   * Run tests in continous integration environment
 
-Note: I adapted the nodeJS server side according to my needs. The original source is [here](https://github.com/cydneymikel/node-box-sdk).
+*Note: I adapted the nodeJS server side according to my needs. The source is [here](https://github.com/cydneymikel/node-box-sdk).*
 
 ## Run the application (add all dependencies later)
 * Create Box account if you don't have
