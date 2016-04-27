@@ -2,7 +2,7 @@
 
 angular.module('boxi.auth')
   .controller('authController', ['$scope', '$window', function($scope, $window) {
-    // To be removed  - extract the credentials
+    // To be removed  - extract the credentials from server side
     var boxAuthUrl = "https://www.box.com/api/oauth2/authorize";
     var code = "code";
     var clientId = "gegee4jf81bjanlsevvivomgb2m96fcu";
